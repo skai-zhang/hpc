@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: a973b1545347b399aec08aee7c557bd9
+    druid:
+      min-idle: 2
+      initial-size: 5
+      max-active: 10
+      max-wait: 5000
+      validation-query: select 1
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    platform: h2
+    url: jdbc:h2:~/Documents/Project/Java/hpc/nasdb
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+---
+spring:
+  config:
+    activate:
+      on-profile: pro
+  datasource:
+    platform: h2
+    url: jdbc:h2:/home/cnb/hpc/database:nasdb
+  h2:
+    console:
+      enabled: false

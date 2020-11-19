@@ -1,0 +1,12 @@
+body.dark{
+    color: #f4f4f4;
+}
+
+body.dark #app-name{
+    color: #f4f4f4;
+    text-shadow: 0px 0px 10px #333333;
+}
+
+body.dark #app-head .container{
+    background: rgba(0, 0, 0, 0.5);
+}

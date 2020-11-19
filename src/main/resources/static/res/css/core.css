@@ -1,0 +1,270 @@
+@font-face{
+    font-family: 'Ubuntu';
+    src : url('../fonts/Ubuntu-R.ttf');
+}
+
+body{
+    background-color: #f2f2f2 !important;
+}
+
+#loading{
+    background-color: #fff;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+
+#loading.over{
+    animation: loadover 1s 1 forwards;
+}
+
+@keyframes loadover{
+    0%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: #333333;
+    }
+}
+
+#loading h1{
+    font-family: "Ubuntu";
+    margin-top: 35vh;
+    font-size: 40px;
+}
+
+#loading.over *{
+    animation: loadover-icon 1s 1 forwards;
+}
+
+@keyframes loadover-icon{
+    0%{
+        color: #333333;
+    }
+    100%{
+        color: #fff;
+    }
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#search {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0 35px 0;
+}
+
+@media (min-width: 768px){
+    #search {
+        width: 700px;
+    }
+}
+
+#search-box{
+    position: relative;
+}
+
+#search-icon{
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    padding: 3px;
+    height: 40px;
+    width: 40px;
+    left: 5px;
+    top: 5px;
+}
+
+#search-icon svg{
+    width: 100%;
+    height: 100%;
+}
+
+#search-icon:hover,#search-icon a:focus{
+    background-color: #e0e0e0;
+}
+
+#search-menu{
+    border-radius: 10px;
+    min-width: 0;
+    width: 50px;
+    border: none;
+    padding: 5px;
+}
+
+#search-menu a{
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+}
+
+#search-menu a:hover,#search-menu a:focus{
+    background-color: #e0e0e0;
+}
+
+#search-menu svg{
+    width: 34px;
+    height: 34px;
+}
+
+#search-btn{
+    background: transparent;
+    position: absolute;
+    padding: 12px 10px;
+    cursor: pointer;
+    color: #ddd;
+    width: 50px;
+    right: 0;
+    top: 0;
+}
+
+#search-btn:hover{
+    color: #6b7184;
+}
+
+#search-btn .icon{
+    font-weight: bold;
+    font-size: 25px;
+    color: inherit;
+}
+
+#search-input {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding-left: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #999;
+    height: 50px;
+    width: 100%;
+}
+
+#app-head{
+    position: absolute;
+    padding: 15px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+
+#app-head .btn{
+    margin-right: 10px;
+    color: #333333;
+    padding: 6px 10px;
+}
+
+.link {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 3px;
+    background: #fff;
+    line-height: 45px;
+    color: #6b7184;
+    font-size: 14px;
+    display: block;
+}
+
+.link img{
+    border-radius: 5px;
+}
+
+.link p{
+    margin: 0;
+}
+
+.biglike{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.like .link{
+    padding: 5px 5px 0 5px;
+    border-radius: 5px;
+    line-height: 20px;
+    margin: 5px 0;
+}
+
+.biglike .link{
+    padding: 5px 5px 0 5px;
+    border-radius: 5px;
+    line-height: 20px;
+    width: 75px;
+    height: 90px;
+    margin: 0 5px;
+}
+
+.link:hover,.link:focus {
+    box-shadow: 0px 5px 10px 1px #afafaf;
+    text-decoration: none;
+    background: #6b7184;
+    color: #FFF;
+}
+
+.link-list .col-xs-12{
+    min-width: 80px;
+    min-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #b7b7b7;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.biglike{
+    display: none;
+}
+
+@media (min-width: 768px){
+    .row.like{
+        display: none;
+    }
+
+    .biglike{
+        display: inline-flex;
+    }
+
+    .link-list .col-xs-4 {
+        padding: 0 3px;
+    }
+}
+
+#app-body{
+    margin-bottom: 20px;
+}
+
+#app-foot{
+    position: absolute;
+    color: #b7b7b7;
+    padding: 15px;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+}
+
+#app-foot .col-xs-6:last-child{
+    text-align: right;
+}
+
+#app-foot a{
+    flex-direction: none;
+    color: #b7b7b7;
+}
